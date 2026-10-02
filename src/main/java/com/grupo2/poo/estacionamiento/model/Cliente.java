@@ -1,4 +1,4 @@
-package com.grupo2.poo.estacionamiento;
+package com.grupo2.poo.estacionamiento.model;
 
 public class Cliente {
 
