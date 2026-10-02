@@ -23,4 +23,9 @@ public class Titulo {
     public String getNivel() {
         return nivel;
     }
+    
+    @Override
+    public String toString() {
+        return nombreCarrera + " (" + nivel + ", " + anio + ")";
+    }
 }

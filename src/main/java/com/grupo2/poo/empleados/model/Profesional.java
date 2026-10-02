@@ -2,28 +2,38 @@ package com.grupo2.poo.empleados.model;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Profesional extends Empleado {
 
-    private ArrayList<Titulo> titulos;
+    private List<Titulo> titulos;
 
-    public Profesional(int legajo, String documento, String nombre,
+    public Profesional(String legajo, String documento, String nombre,
             LocalDate fechaIngreso, int cantidadHijos) {
 
         super(legajo, documento, nombre, fechaIngreso, cantidadHijos);
-        titulos = new ArrayList<Titulo>();
+        titulos = new ArrayList<>();
     }
 
-    public ArrayList<Titulo> getTitulos() {
+    public List<Titulo> getTitulos() {
         return titulos;
     }
 
-    public void agregarTitulo(Titulo titulo) {
+    public void agregarTitulo(String legajo,Titulo titulo) {
         titulos.add(titulo);
     }
 
     @Override
     public double calcularAdicional() {
-        return titulos.size() * 30000;
+        return titulos.size() * 30000d;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + " | Títulos: " + titulos;
+    }
+
+	
+    
+    
 }
